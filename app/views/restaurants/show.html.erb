@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2 col-xs-11 col-xs-offset-0.5 ">
+		<div class="card w-75 " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+		url('<%= cl_image_path @restaurant.photo, width: 500, height: 180, crop: :fill %>')">
+		
+
+
+			<h1><%= @restaurant.name %></h1>
+			<p> <%= @restaurant.description%> </p>
+			<p> <%= @restaurant.address%> </p>
+			<p> <%= @restaurant.rating%> </p>
+
+			<%= link_to "Back to list", restaurants_path %>
+		</div>
+	</div>
+</div>
+</div>

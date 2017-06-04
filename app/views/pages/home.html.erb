@@ -1,2 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4 col-sm-offset-4 text-center">
+
+			<h1>Search by</h1>
+			<br><br><br>
+			<%= link_to t(".button", default: "Categories"), categories_path, class: "button icon-chevron-right" %>
+			<%= link_to t(".button", default: "Address"), address_path, class: "button icon-chevron-right" %>
+			<%= link_to t(".button", default: "Rating"), rating_path, class: "button icon-chevron-right" %>
+			<%= link_to t(".button", default: "Price"), price_path, class: "button icon-chevron-right" %>
+			<%= link_to t(".button", default: "All"), restaurants_path, class: "button icon-chevron-right" %>
+		</div>
+	</div>
+</div>
+
