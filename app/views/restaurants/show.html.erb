@@ -1,3 +1,6 @@
+<h1 class="text-center" ><%= @restaurant.name %></h1>
+
+
 <div class="container">
 	<div class="row">
 		<div class="col-sm-8 col-sm-offset-2 col-xs-11 col-xs-offset-0.5 ">
@@ -6,7 +9,7 @@
 		
 
 
-			<h1><%= @restaurant.name %></h1>
+			
 			<p> <%= @restaurant.description%> </p>
 			<p> <%= @restaurant.address%> </p>
 			<p> <%= @restaurant.rating%> </p>
@@ -16,3 +19,45 @@
 	</div>
 </div>
 </div>
+
+    <div class="container text-center padded features">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= cl_image_tag("Call-incoming-icon_pzwyj9",
+      width: 50, height: 50) %>
+  <% end %>
+          <h2>Call</h2>
+          <p>The earth is your new home.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= cl_image_tag("Place-icon_css1lg",
+      width: 50, height: 50) %>
+  <% end %>
+          <h2>Itinarery</h2>
+          <p><%= @restaurant.address%></p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+         <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= cl_image_tag("Files-2-icon_aec0za",
+      width: 50, height: 50) %>
+  <% end %>
+          <h2>Menu</h2>
+          <p>Coming soon.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= cl_image_tag("Pointer-icon_ljvtyb",
+      width: 50, height: 50) %>
+  <% end %>
+          <h2>Website</h2>
+          <p>Join a community you will love.</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
