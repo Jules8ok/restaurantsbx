@@ -7,7 +7,7 @@
 			<% sorted.each do |restaurant| %>
 
 			<div class="card w-75 " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-		url('<%= cl_image_path @restaurant.photo, width: 500, height: 180, crop: :fill %>')">
+		url('<%= cl_image_path restaurant.photo, width: 500, height: 180, crop: :fill %>')">
 				<div class="card-block">
 					<h3 class="card-title"><%=restaurant.name%></h3>
 					<p class="card-text"><p> <%= restaurant.description%> </p>
@@ -23,7 +23,7 @@
 			<%end%>
 			
 			<br>
-			<%= link_to "Add a new restaurant", new_restaurants_path %>
+			<%= link_to "Add a new restaurant", new_restaurant_path %>
 		</div>
 	</div>
 </div>
