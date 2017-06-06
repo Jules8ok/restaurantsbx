@@ -1,3 +1,280 @@
+<div class="area">
+  
+  <!-- close topbar -->
+  <div class="page fullview front" id="p1">
+    <div class="invisible">.</div>
+    <div class="quote">
+      <%= @restaurant.name %> <span class="blue">tables</span>.
+    </div>
+    <!--  close quote    -->
+    <div class="author">
+      <%= @restaurant.category %>
+    </div>
+    <!--   close author     -->
+  </div>
+  <!--   close front   -->
+  <div class="about" id="p2">
+    <div class="floater-about">
+    </div>
+    <div class="black-title">
+      about <span class="blue">.</span>
+    </div>
+    <!--  close about title   -->
+    <div class="pp-full">
+      <div class="pp-div" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+    url('<%= cl_image_path @restaurant.photo, width: 500, height: 180, crop: :fill %>')" >
+
+      </div>
+      <!--   close pp div   -->
+      <div class="pp-desc desc black">
+        <span style="font-weight:bold"><%= @restaurant.name %></span> fait partie de ces institutions de la Gastronomie Française tournée vers la cuisine de Poissons. Avec une sélection de produits de qualité, triés drastiquement sur le volet par le Chef Yves Mutin, vous trouverez une cuisine faite de simplicité, mêlée d'une touche de perfection gastronomique.
+
+À deux pas de la place des Ternes, le restaurant jouit de la proximité des hauts lieux animés de Paris, tels que les Champs Elysées ou la Salle Pleyel.
+
+La reprise de ce restaurant par Pascal MOUSSET, lui redonne un coup de jeune, avec la ferme volonté de recréer l'ambiance qui a fait le succès de ce restaurant convivial, doté d'une cuisine de marché à prix doux.
+
+Ce restaurant cosy de 60 places, fait le bonheur des amoureux de la Cuisine Française de Poissons, où se mêlent harmonieusement les Stars du show business, les Hommes d'affaires, comme tous les hédonistes, amoureux de la bonne cuisine. 
+
+Une cuisine à découvrir ou redécouvrir pour les plaisirs du palais.
+      </div>
+      <div class="black-title"><span class="blue">}</span></div>
+      <!--  close pp desc  -->
+    </div>
+    <!--  close pp full  -->
+    <div class="black-title" id="skills-title">
+      #skills <span class="blue">{</span>
+    </div>
+    <div class="skills text-center">
+      <i class="fa fa-ps skills-icons">
+      </i>
+      <i class="fa fa-html5 skills-icons">
+      </i>
+      <i class="fa fa-css3 skills-icons">
+      </i>
+      <i class="icon-javascript-alt skills-icons">
+      </i>
+      <br>
+    </div>
+    <div class="skills-desc desc black">
+      I am halfway through freeCodeCamp's <span style="font-weight:bold">Front End Development</span> training and certification. I have intermediate knowledge of HTML, CSS and JavaScript.
+    </div>
+    <div class="black-title"><span class="blue">}</span></div>
+
+    <div class="black-title" style="margin-top:30px">
+      .other-facts <span class="blue">{</span>
+    </div>
+    <div class="facts-desc desc black">
+      <ul class="fa-ul">
+        <li class="other-list"><i class="fa-li fa fa-graduation-cap facts-icon"></i>I am currently studying Computer Engineering in Argentina.</li>
+        <li class="other-list"><i class="fa-li fa fa-globe facts-icon"></i>I love travelling and am always looking forward to discovering new places.</li>
+        <li class="other-list"><i class="fa-li fa fa-language facts-icon"></i>I am fluent in both Spanish in English, and know basic French.
+
+      </ul>
+    </div>
+    <div class="black-title"><span class="blue">}</span></div>
+    <!--   close about   -->
+    <div class="portfolio" id="p3">
+      <div class="white-title" id="portfolio-title">
+        &lt;portfolio&gt;
+      </div>
+      <div class="slideshow">
+        <div class="slide-div fade">
+          <a href="https://codepen.io/nicopoore/full/LboOvK" target="_blank"><img src="https://i.imgur.com/Lu0rNKm.png" class="slide" id="rqm"></a>
+          <div class="caption">
+            Random Quote Machine
+          </div>
+        </div>
+        <div class="slide-div fade">
+          <a href="https://codepen.io/nicopoore/full/eBwVem" target="_blank"><img src="https://i.imgur.com/OrgXVsK.png" class="slide" id="weather"></a>
+          <div class="caption">
+            Weather App
+          </div>
+        </div>
+        <div class="slide-div fade">
+          <a href="https://codepen.io/nicopoore/full/ygBbLE" target="_blank"><img src="https://i.imgur.com/FHfuQZi.png" class="slide" id="wiki"></a>
+          <div class="caption">
+            Wikipedia Viewer
+          </div>
+        </div>
+        <div class="slide-div fade">
+          <a href="https://codepen.io/nicopoore/full/zNrRWd" target="_blank"><img src="https://i.imgur.com/36vVT1Y.png" class="slide" id="twitch"></a>
+          <div class="caption">
+            Twich.tv
+          </div>
+        </div>
+        <a class="previous" onclick="slideChange(-1)">&#10094;</a>
+        <a class="next" onclick="slideChange(+1)">&#10095;</a>
+
+
+      </div>
+      <br>
+
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+      <div class="after-dots"></div>
+      <div class="white-title" id="close-portfolio-title">
+        &lt;/portfolio&gt;
+      </div>
+    </div>
+    <!--   close about   -->
+    <div class="contact" id="p4">
+      <div class="black-title">
+        .contact<span style="color:#5B6A77">(me)</span> <span class="blue">{</span>
+      </div>
+      <div class="contact-desc desc black">
+        If you wish to contact me or learn more about me, you may do so through my social media. These are my main means of communication and I will try to answer any messages as soon as I can. Thank you!
+      </div>
+      <div class="contact-icons">
+          <a href="https://twitter.com/nickpoore" target="_blank" class="contact-link">
+            <i class="fa fa-twitter fa-fw"></i>
+          </a>
+          <a href="https://www.facebook.com/NikK.Poore" target="_blank" class="contact-link">
+            <i class="fa fa-facebook fa-fw"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/nicolas-poore-3b9118113" target="_blank" class="contact-link">
+            <i class="fa fa-linkedin fa-fw"></i>
+          </a>
+          <a href="http://nik1010.deviantart.com/" target="_blank" class="contact-link">
+            <i class="fa fa-deviantart fa-fw"></i>
+          </a>
+        </div><div class="contact-icons">
+          <a href="https://www.freecodecamp.com/nicopoore" target="_blank" class="contact-link">
+            <i class="fa fa-free-code-camp fa-fw"></i>
+          </a>
+          <a href="https://www.github.com/nicopoore" target="_blank" class="contact-link">
+            <i class="fa fa-github fa-fw"></i>
+          </a>
+          <a href="https://codepen.io/nicopoore/" target="_blank" class="contact-link">
+            <i class="fa fa-codepen fa-fw"></i>
+          </a>
+          <a href="mailto:nicolaspoore@gmail.com" target="_blank" class="contact-link">
+            <i class="fa fa-envelope-o fa-fw"></i>
+          </a>
+       
+      </div>
+      <!--  close quote    -->
+    <div class="black-title margin-margin"><span class="blue">}</span></div>
+      
+      <div class="black desc end">
+        By <a class="fcc-profile" href="https://freecodecamp.com/nicopoore" target="_blank">Nicolas Poore</a>
+      
+    </div>
+    <!--   close about   -->
+  </div>
+  <!-- close area -->
+
+
+  <script type="text/javascript">
+$(document).ready(function() {
+  // NAV BUTTONS JS
+  $(".front-but").click(function() {
+    window.scrollTo(0,0)
+      behavior: 'smooth'
+  })
+  $(".about-but").click(function() {
+    document.getElementById("p2").scrollIntoView({
+      behavior: 'smooth'
+    });
+  })
+  $(".portfolio-but").click(function() {
+    document.getElementById("p3").scrollIntoView({
+      behavior: 'smooth'
+    });
+  })
+  $(".contact-but").click(function() {
+    document.getElementById("p4").scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+
+  // NAVBAR HIDE JS
+
+  var scrolled;
+  var lastScrollTop = 0;
+  var delta = 5;
+  var navbarHeight = $("#navigation").outerHeight();
+  console.log(navbarHeight);
+
+  $(window).scroll(function(event) {
+    scrolled = true;
+  });
+
+  setInterval(function() {
+    if (scrolled) {
+      scrollFunction();
+      scrolled = false;
+    }
+  }, 250);
+
+  function scrollFunction() {
+    var st = $(this).scrollTop();
+    if (Math.abs(lastScrollTop - st) <= delta) {
+      return;
+    }
+    if (st > lastScrollTop && st > navbarHeight) {
+      $("#navigation").removeClass("nav-down").addClass("nav-up");
+    } else {
+      if (st + $(window).height() < $(document).height()) {
+        $("#navigation").removeClass("nav-up").addClass("nav-down");
+      }
+    }
+  lastScrollTop = st
+    
+  }
+})  
+
+  // SLIDESHOW JS
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function slideChange(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slide-div");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+      slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
 <h1 class="text-center" ><%= @restaurant.name %></h1>
 
 
