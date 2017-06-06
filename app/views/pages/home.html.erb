@@ -3,15 +3,46 @@
 		<div class="row">
 			<div class="col-sm-4 col-sm-offset-4 text-center">
 
-				<h1>Search by</h1>
-				<br><br><br>
-				<%= link_to t(".button", default: "Categories"), categories_path, class: "button icon-chevron-right" %>
-				<%= link_to t(".button", default: "Address"), address_path, class: "button icon-chevron-right" %>
-				<%= link_to t(".button", default: "Rating"), rating_path, class: "button icon-chevron-right" %>
-				<%= link_to t(".button", default: "Price"), price_path, class: "button icon-chevron-right" %>
-				<%= link_to t(".button", default: "All"), restaurants_path, class: "button icon-chevron-right" %>
+				<h1 class = "searchby">Search by</h1>
+
 			</div>
 		</div>
 	</div>
 </div>
 
+<div class="wrapper">
+  <div class="o-hover__block">
+     <%= link_to price_path,
+     		class: 'c-btn c-btn--line',
+     		data: { 'hover-name' => 'HOVER.LINE' } do %>
+     	BY<span>.</span>PRICE
+     <% end %>
+  </div>
+
+
+<div class="o-hover__block">
+     <%= link_to rating_path,
+        class: 'c-btn c-btn--double-line',
+        data: { 'hover-name' => 'HOVER.LINE' } do %>
+      BY<span>.</span>RATING
+     <% end %>
+  </div>
+
+  <div class="o-hover__block">
+     <%= link_to address_path,
+        class: 'c-btn c-btn--big-line',
+        data: { 'hover-name' => 'BY.ADDRESS' } do %>
+      BY<span>.</span>ADDRESS
+     <% end %>
+  </div>
+
+  <div class="o-hover__block">
+     <%= link_to categories_path,
+        class: 'c-btn c-btn--border-line',
+        data: { 'hover-name' => 'BY.ADDRESS' } do %>
+      BY<span>.</span>CATEGORIES
+     <% end %>
+  </div>
+
+
+</div>
