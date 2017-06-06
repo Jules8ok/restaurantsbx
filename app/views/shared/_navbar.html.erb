@@ -3,24 +3,24 @@
 
 
 
-<div class="topbar nav-down" id="navigation">
+  <div class="topbar nav-down" id="navigation">
+    <%= link_to restaurants_path do %>
     <div class="name pull-left">
       Brussel's tables
     </div>
+    <% end %>
     <!--     close name -->
     <div class="nav-buts pull-right">
-
+<%= link_to restaurants_path do %>
+            <button class="nav-but btn front-but"><%= "HOME" %></button>  
+            <% end %>
+              <%= link_to edit_user_registration_path do %>
+            <button class="nav-but btn front-but"><%= "PROFIL" %></button>  
+            <% end %>
 <%= link_to root_path do %>
             <button class="nav-but btn front-but"><%= "SEARCH" %></button>  
             <% end %>
 
-            <%= link_to edit_user_registration_path do %>
-            <button class="nav-but btn front-but"><%= "PROFIL" %></button>  
-            <% end %>
-
-      <button class="nav-but btn contact-but">
-        CONTACT ME
-      </button>
       <% if user_signed_in? %>
          <%= link_to destroy_user_session_path, method: :delete do %>
             <button class="nav-but btn"><%= t(".sign_out", default: "LOG OUT") %></button>  
@@ -41,6 +41,7 @@
    <div class="name pull-left">
       Brussel's tables
     </div>
+
 
 
     <div class="dropdown">
