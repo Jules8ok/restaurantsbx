@@ -3,7 +3,7 @@
 
 <div class="wrapper-grey padded">
 	<div class="container">
-		<h2 class="text-center">Les restaurants</h2>
+		<h2 class="text-center searchby">Les restaurants <br><br><br></h2>
 		<% @restaurants.each do |restaurant| %>
 		<div class="row">
 			<div class="col-xs-12 col-sm-4">
@@ -13,12 +13,12 @@
 						<h2><%=restaurant.name%></h2>
 						<p><%= restaurant.description%></p>
 					</div>
-					
-					
+
+
 					<%= link_to t(".button", default: "Take a look"), restaurant_path(restaurant), class: "card-link" %>
 				</div>
 			</div>
-			<% end %>	
+			<% end %>
 		</div>
 	</div>
 </div>
