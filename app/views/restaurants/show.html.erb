@@ -17,8 +17,8 @@
     <div class="floater-about">
     </div>
     <div class="black-title">
-      about <span class="blue">.</span>
-    </div>
+        <span style="color:#5B6A77"> <%= @restaurant.name %></span> <span class="blue"></span>
+      </div>
     <!--  close about title   -->
     <div class="pp-full">
       <div class="pp-div" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
@@ -37,135 +37,62 @@ Ce restaurant cosy de 60 places, fait le bonheur des amoureux de la Cuisine Fran
 
 Une cuisine à découvrir ou redécouvrir pour les plaisirs du palais.
       </div>
-      <div class="black-title"><span class="blue">}</span></div>
-      <!--  close pp desc  -->
-    </div>
-    <!--  close pp full  -->
-    <div class="black-title" id="skills-title">
-      #skills <span class="blue">{</span>
-    </div>
-    <div class="skills text-center">
-      <i class="fa fa-ps skills-icons">
-      </i>
-      <i class="fa fa-html5 skills-icons">
-      </i>
-      <i class="fa fa-css3 skills-icons">
-      </i>
-      <i class="icon-javascript-alt skills-icons">
-      </i>
-      <br>
-    </div>
-    <div class="skills-desc desc black">
-      I am halfway through freeCodeCamp's <span style="font-weight:bold">Front End Development</span> training and certification. I have intermediate knowledge of HTML, CSS and JavaScript.
-    </div>
-    <div class="black-title"><span class="blue">}</span></div>
-
-    <div class="black-title" style="margin-top:30px">
-      .other-facts <span class="blue">{</span>
-    </div>
-    <div class="facts-desc desc black">
-      <ul class="fa-ul">
-        <li class="other-list"><i class="fa-li fa fa-graduation-cap facts-icon"></i>I am currently studying Computer Engineering in Argentina.</li>
-        <li class="other-list"><i class="fa-li fa fa-globe facts-icon"></i>I love travelling and am always looking forward to discovering new places.</li>
-        <li class="other-list"><i class="fa-li fa fa-language facts-icon"></i>I am fluent in both Spanish in English, and know basic French.
-
-      </ul>
-    </div>
-    <div class="black-title"><span class="blue">}</span></div>
-    <!--   close about   -->
-    <div class="portfolio" id="p3">
-      <div class="white-title" id="portfolio-title">
-        &lt;portfolio&gt;
-      </div>
-      <div class="slideshow">
-        <div class="slide-div fade">
-          <a href="https://codepen.io/nicopoore/full/LboOvK" target="_blank"><img src="https://i.imgur.com/Lu0rNKm.png" class="slide" id="rqm"></a>
-          <div class="caption">
-            Random Quote Machine
-          </div>
-        </div>
-        <div class="slide-div fade">
-          <a href="https://codepen.io/nicopoore/full/eBwVem" target="_blank"><img src="https://i.imgur.com/OrgXVsK.png" class="slide" id="weather"></a>
-          <div class="caption">
-            Weather App
-          </div>
-        </div>
-        <div class="slide-div fade">
-          <a href="https://codepen.io/nicopoore/full/ygBbLE" target="_blank"><img src="https://i.imgur.com/FHfuQZi.png" class="slide" id="wiki"></a>
-          <div class="caption">
-            Wikipedia Viewer
-          </div>
-        </div>
-        <div class="slide-div fade">
-          <a href="https://codepen.io/nicopoore/full/zNrRWd" target="_blank"><img src="https://i.imgur.com/36vVT1Y.png" class="slide" id="twitch"></a>
-          <div class="caption">
-            Twich.tv
-          </div>
-        </div>
-        <a class="previous" onclick="slideChange(-1)">&#10094;</a>
-        <a class="next" onclick="slideChange(+1)">&#10095;</a>
-
-
-      </div>
-      <br>
-
-      <div class="dots">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-      </div>
-      <div class="after-dots"></div>
-      <div class="white-title" id="close-portfolio-title">
-        &lt;/portfolio&gt;
-      </div>
-    </div>
-    <!--   close about   -->
-    <div class="contact" id="p4">
-      <div class="black-title">
-        .contact<span style="color:#5B6A77">(me)</span> <span class="blue">{</span>
-      </div>
+      
+ <div class="contact" id="p4">
+      
       <div class="contact-desc desc black">
-        If you wish to contact me or learn more about me, you may do so through my social media. These are my main means of communication and I will try to answer any messages as soon as I can. Thank you!
+
       </div>
-      <div class="contact-icons">
-          <a href="https://twitter.com/nickpoore" target="_blank" class="contact-link">
-            <i class="fa fa-twitter fa-fw"></i>
-          </a>
-          <a href="https://www.facebook.com/NikK.Poore" target="_blank" class="contact-link">
-            <i class="fa fa-facebook fa-fw"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/nicolas-poore-3b9118113" target="_blank" class="contact-link">
-            <i class="fa fa-linkedin fa-fw"></i>
-          </a>
-          <a href="http://nik1010.deviantart.com/" target="_blank" class="contact-link">
-            <i class="fa fa-deviantart fa-fw"></i>
-          </a>
-        </div><div class="contact-icons">
-          <a href="https://www.freecodecamp.com/nicopoore" target="_blank" class="contact-link">
-            <i class="fa fa-free-code-camp fa-fw"></i>
-          </a>
-          <a href="https://www.github.com/nicopoore" target="_blank" class="contact-link">
-            <i class="fa fa-github fa-fw"></i>
-          </a>
-          <a href="https://codepen.io/nicopoore/" target="_blank" class="contact-link">
-            <i class="fa fa-codepen fa-fw"></i>
-          </a>
-          <a href="mailto:nicolaspoore@gmail.com" target="_blank" class="contact-link">
-            <i class="fa fa-envelope-o fa-fw"></i>
-          </a>
-       
+      
+    <div class="text-center">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= cl_image_tag("Call-incoming-icon_pzwyj9",
+      width: 50, height: 50) %>
+  <% end %>
+          <h2>Call</h2>
+          <p>The earth is your new home.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= cl_image_tag("Place-icon_css1lg",
+      width: 50, height: 50) %>
+  <% end %>
+          <h2>Itinarery</h2>
+          <p><%= @restaurant.address%></p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+         <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= cl_image_tag("Files-2-icon_aec0za",
+      width: 50, height: 50) %>
+  <% end %>
+          <h2>Menu</h2>
+          <p>Coming soon.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= cl_image_tag("Pointer-icon_ljvtyb",
+      width: 50, height: 50) %>
+  <% end %>
+          <h2>Website</h2>
+          <p>Join a community you will love.</p>
+        </div>
       </div>
-      <!--  close quote    -->
-    <div class="black-title margin-margin"><span class="blue">}</span></div>
-      
-      <div class="black desc end">
-        By <a class="fcc-profile" href="https://freecodecamp.com/nicopoore" target="_blank">Nicolas Poore</a>
-      
-    </div>
+    </div>   
+    <!--   close about   -->
+    
+    <!--   close about   -->
+   
+
     <!--   close about   -->
   </div>
   <!-- close area -->
+
+
+
+
+
 
 
   <script type="text/javascript">
@@ -275,64 +202,6 @@ $(document).ready(function() {
 
 
 
-<h1 class="text-center" ><%= @restaurant.name %></h1>
-
-
-<div class="container">
-	<div class="row">
-		<div class="col-sm-8 col-sm-offset-2 col-xs-11 col-xs-offset-0.5 ">
-		<div class="card w-75 " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-		url('<%= cl_image_path @restaurant.photo, width: 500, height: 180, crop: :fill %>')">
-		
-
-
-			
-			<p> <%= @restaurant.description%> </p>
-			<p> <%= @restaurant.address%> </p>
-			<p> <%= @restaurant.rating%> </p>
-
-			<%= link_to "Back to list", restaurants_path %>
-		</div>
-	</div>
-</div>
-</div>
-
-    <div class="container text-center padded features">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= cl_image_tag("Call-incoming-icon_pzwyj9",
-      width: 50, height: 50) %>
-  <% end %>
-          <h2>Call</h2>
-          <p>The earth is your new home.</p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= cl_image_tag("Place-icon_css1lg",
-      width: 50, height: 50) %>
-  <% end %>
-          <h2>Itinarery</h2>
-          <p><%= @restaurant.address%></p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-         <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= cl_image_tag("Files-2-icon_aec0za",
-      width: 50, height: 50) %>
-  <% end %>
-          <h2>Menu</h2>
-          <p>Coming soon.</p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= cl_image_tag("Pointer-icon_ljvtyb",
-      width: 50, height: 50) %>
-  <% end %>
-          <h2>Website</h2>
-          <p>Join a community you will love.</p>
-        </div>
-      </div>
-    </div>
 
 
 
