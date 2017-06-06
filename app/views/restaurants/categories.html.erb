@@ -1,26 +1,24 @@
-<div class="container">
-	<div class="row">
-		<div class="col-sm-8 col-sm-offset-2 col-xs-11 col-xs-offset-0.5 ">
-			<h1>By categories <br><br></h1>
-			<% @restaurants.each do |restaurant| %>
-
-			<div class="card w-75 " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-		url('<%= cl_image_path restaurant.photo, width: 500, height: 180, crop: :fill %>')">
-				<div class="card-block">
-					<h3 class="card-title"><%=restaurant.name%></h3>
-					<p class="card-text"><p> <%= restaurant.description%> </p>
-					<p> <%= restaurant.address%> </p>
-					<p> <%= restaurant.price%> </p>
-					<p> <%= restaurant.rating%> </p> </p>
-					<%= link_to t(".button", default: "Take a look"), restaurant_path(restaurant), class: "btn btn-primary" %>
-					<%= link_to t(".button", default: "Rate"), restaurant_path(restaurant), class: "btn btn-primary rate" %>
-					<%= link_to t(".button", default: "Reviews"), restaurant_path(restaurant), class: "btn btn-primary rate" %>
-					<%= link_to t(".button", default: "Menu"), restaurant_path(restaurant), class: "btn btn-primary rate" %>
+<div class="wrapper-grey padded">
+	<div class="container">
+		<h2 class="text-center">Les restaurants</h2>
+		<% @restaurants.each do |restaurant| %>
+		<div class="row">
+			<div class="col-xs-12 col-sm-4">
+				<div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path restaurant.photo, width: 500, height: 180, crop: :fill %>');">
+					<div class="card-category"><%= restaurant.category%></div>
+					<div class="card-description">
+						<h2><%=restaurant.name%></h2>
+						<p><%= restaurant.description%></p>
+					</div>
+					<img class="" src="images/seb.jpg">
+					<% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
+					<%= image_tag avatar_url, class: "card-user avatar avatar-large"%>
+					
+					<%= link_to t(".button", default: "Take a look"), restaurant_path(restaurant), class: "card-link" %>
 				</div>
 			</div>
-			<% end %>			
-			<br>
-			<%= link_to "Add a new restaurant", new_restaurant_path %>
+			<% end %>	
 		</div>
 	</div>
+</div>
 </div>

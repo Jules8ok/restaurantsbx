@@ -1,26 +1,50 @@
-<h1 class="text-center" ><%= @restaurant.name %></h1>
+<div class="area">
+  
+  <!-- close topbar -->
+  <div class="page fullview front" id="p1">
+    <div class="invisible">.</div>
+    <div class="quote">
+      <%= @restaurant.name %> <span class="blue">tables</span>.
+    </div>
+    <!--  close quote    -->
+    <div class="author">
+      <%= @restaurant.category %>
+    </div>
+    <!--   close author     -->
+  </div>
+  <!--   close front   -->
+  <div class="about" id="p2">
+    <div class="floater-about">
+    </div>
+    <div class="black-title">
+        <span style="color:#5B6A77"> <%= @restaurant.name %></span> <span class="blue"></span>
+      </div>
+    <!--  close about title   -->
+    <div class="pp-full">
+      <div class="pp-div" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+    url('<%= cl_image_path @restaurant.photo, width: 500, height: 180, crop: :fill %>')" >
 
+      </div>
+      <!--   close pp div   -->
+      <div class="pp-desc desc black">
+        <span style="font-weight:bold"><%= @restaurant.name %></span> fait partie de ces institutions de la Gastronomie Française tournée vers la cuisine de Poissons. Avec une sélection de produits de qualité, triés drastiquement sur le volet par le Chef Yves Mutin, vous trouverez une cuisine faite de simplicité, mêlée d'une touche de perfection gastronomique.
 
-<div class="container">
-	<div class="row">
-		<div class="col-sm-8 col-sm-offset-2 col-xs-11 col-xs-offset-0.5 ">
-		<div class="card w-75 " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-		url('<%= cl_image_path @restaurant.photo, width: 500, height: 180, crop: :fill %>')">
-		
+À deux pas de la place des Ternes, le restaurant jouit de la proximité des hauts lieux animés de Paris, tels que les Champs Elysées ou la Salle Pleyel.
 
+La reprise de ce restaurant par Pascal MOUSSET, lui redonne un coup de jeune, avec la ferme volonté de recréer l'ambiance qui a fait le succès de ce restaurant convivial, doté d'une cuisine de marché à prix doux.
 
-			
-			<p> <%= @restaurant.description%> </p>
-			<p> <%= @restaurant.address%> </p>
-			<p> <%= @restaurant.rating%> </p>
+Ce restaurant cosy de 60 places, fait le bonheur des amoureux de la Cuisine Française de Poissons, où se mêlent harmonieusement les Stars du show business, les Hommes d'affaires, comme tous les hédonistes, amoureux de la bonne cuisine. 
 
-			<%= link_to "Back to list", restaurants_path %>
-		</div>
-	</div>
-</div>
-</div>
+Une cuisine à découvrir ou redécouvrir pour les plaisirs du palais.
+      </div>
+      
+ <div class="contact" id="p4">
+      
+      <div class="contact-desc desc black">
 
-    <div class="container text-center padded features">
+      </div>
+      
+    <div class="text-center">
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-3">
           <%= link_to root_path, class: "navbar-wagon-brand" do %>
@@ -55,7 +79,129 @@
           <p>Join a community you will love.</p>
         </div>
       </div>
-    </div>
+    </div>   
+    <!--   close about   -->
+    
+    <!--   close about   -->
+   
+
+    <!--   close about   -->
+  </div>
+  <!-- close area -->
+
+
+
+
+
+
+
+  <script type="text/javascript">
+$(document).ready(function() {
+  // NAV BUTTONS JS
+  $(".front-but").click(function() {
+    window.scrollTo(0,0)
+      behavior: 'smooth'
+  })
+  $(".about-but").click(function() {
+    document.getElementById("p2").scrollIntoView({
+      behavior: 'smooth'
+    });
+  })
+  $(".portfolio-but").click(function() {
+    document.getElementById("p3").scrollIntoView({
+      behavior: 'smooth'
+    });
+  })
+  $(".contact-but").click(function() {
+    document.getElementById("p4").scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+
+  // NAVBAR HIDE JS
+
+  var scrolled;
+  var lastScrollTop = 0;
+  var delta = 5;
+  var navbarHeight = $("#navigation").outerHeight();
+  console.log(navbarHeight);
+
+  $(window).scroll(function(event) {
+    scrolled = true;
+  });
+
+  setInterval(function() {
+    if (scrolled) {
+      scrollFunction();
+      scrolled = false;
+    }
+  }, 250);
+
+  function scrollFunction() {
+    var st = $(this).scrollTop();
+    if (Math.abs(lastScrollTop - st) <= delta) {
+      return;
+    }
+    if (st > lastScrollTop && st > navbarHeight) {
+      $("#navigation").removeClass("nav-down").addClass("nav-up");
+    } else {
+      if (st + $(window).height() < $(document).height()) {
+        $("#navigation").removeClass("nav-up").addClass("nav-down");
+      }
+    }
+  lastScrollTop = st
+    
+  }
+})  
+
+  // SLIDESHOW JS
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function slideChange(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slide-div");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+      slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

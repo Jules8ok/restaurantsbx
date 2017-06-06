@@ -1,13 +1,16 @@
-<div class="container">
-	<div class="row">
-		<div class="col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-3 ">
+<div class="wrapper-grey padded">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-3 ">
 
-			<h1>Editing Restaurant</h1>
+				<h1>Editing Restaurant</h1>
 
-			<%= render 'forms', restaurant: @restaurant %>
+				<%= render 'forms', restaurant: @restaurant %>
 
-			<%= link_to 'Show', @retaurant %> |
-			<%= link_to 'Back', restaurant_path %>
+				<%= link_to 'Show', @retaurant %> |
+				<%= link_to 'Back', restaurant_path %>
+			</div>
 		</div>
 	</div>
+
 </div>
