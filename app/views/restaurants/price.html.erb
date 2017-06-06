@@ -3,7 +3,7 @@
 				<h1 class="text-center">Restaurants by price <br><br><br></h1>
 				<% sorted = @restaurants.sort_by { |k| k["price"] } %>
 				<% sorted.each do |restaurant| %>
-				
+
 				<div class="row">
 					<div class="col-xs-12 col-sm-4">
 						<div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path restaurant.photo, width: 500, height: 180, crop: :fill %>');">
@@ -13,8 +13,7 @@
 								<p><%= restaurant.description%></p>
 								<h6>Average price per person <%=restaurant.price%>€ </h6>
 							</div>
-							<img class="card-user avatar avatar-large" src="images/seb.jpg">
-							<%= link_to t(".button", default: "Price"), restaurant_path(restaurant), class: "card-link" %>
+
 						</div>
 					</div>
 					<%end%>
